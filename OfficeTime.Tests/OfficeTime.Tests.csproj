@@ -19,4 +19,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\OfficeTime.Core\OfficeTime.MvxStarter.Core.csproj" />
+  </ItemGroup>
+
 </Project>
