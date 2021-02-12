@@ -1,0 +1,58 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:OfficeTime.Resource.styles">
+    <Style x:Key="topStackPanelStyle" TargetType="StackPanel">
+        <Setter Property="Orientation"  Value="Vertical"/>
+        <Setter Property="Background"  Value="#FF476C9A"/>
+    </Style>
+    <Style x:Key="topBarLabelStyle" TargetType="Label">
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="FontFamily" Value="Corbel Light" />
+        <Setter Property="FontWeight" Value="Normal" />
+    </Style>
+    <Style x:Key="topBarTextStyle" TargetType="TextBlock">
+        <Setter Property="Text" Value="BEYABLE" />
+        <Setter Property="FontSize" Value="100" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+    <Style x:Key="bottomStackPanelStyle" TargetType="StackPanel">
+        <Setter Property="Orientation"  Value="Vertical"/>
+    </Style>
+    <Style x:Key="textBoxLabelStyle" TargetType="Label">
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="Margin" Value="60 0 0 0" />
+    </Style>
+    <Style x:Key="textBoxStyle" TargetType="TextBox">
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Width" Value="300" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="Margin" Value="60 5 0 0" />
+        <Setter Property="Height" Value="35" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+    </Style>
+    <Style x:Key="checkBoxStyle" TargetType="CheckBox">
+        <Setter Property="Width" Value="120" />
+        <Setter Property="IsChecked" Value="False" />
+        <Setter Property="Margin" Value="60 20 0 0" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+    </Style>
+    <Style x:Key="loginButtonStyle" TargetType="Button">
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="Height" Value="55" />
+        <Setter Property="Width" Value="150" />
+        <Setter Property="Margin" Value="0 20 60 0" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Background"  Value="#FF476C9A" />
+    </Style>
+    <Style x:Key="linkTextStyle" TargetType="TextBlock">
+        <Setter  Property="VerticalAlignment" Value="Center" />
+        <Setter  Property="HorizontalAlignment" Value="Center" />
+        <Setter  Property="Margin" Value="0 10 60 0" />
+        <Setter  Property="Foreground" Value="#FF476C9A" />
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,41 @@
+﻿<Window x:Class="OfficeTime.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OfficeTime"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="500">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Style="{StaticResource topStackPanelStyle}">
+            <Label Style="{StaticResource topBarLabelStyle}">
+                <TextBlock Style="{StaticResource topBarTextStyle}">
+                    <TextBlock.TextEffects>
+                        <TextEffect PositionStart="2" 
+                                    PositionCount="1" 
+                                    Foreground="Red"/>
+                    </TextBlock.TextEffects>
+                </TextBlock>
+            </Label>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Style="{StaticResource bottomStackPanelStyle}">
+            <Label Content="Email" Style="{StaticResource textBoxLabelStyle}" />
+            <Border>
+                <TextBox Style="{StaticResource textBoxStyle}" />
+            </Border>
+            <Label Content="Password" Style="{StaticResource textBoxLabelStyle}" />
+            <Border>
+                <TextBox Style="{StaticResource textBoxStyle}" />
+            </Border>
+            <CheckBox Content="Remember Me?" Style="{StaticResource checkBoxStyle}" />
+            <Button Content="LOGIN" Style="{StaticResource loginButtonStyle}" />
+            <TextBlock Style="{StaticResource linkTextStyle}">
+                <Hyperlink TextDecorations="None" NavigateUri="http://forgotpassword.com">Forgot Password</Hyperlink>
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>
