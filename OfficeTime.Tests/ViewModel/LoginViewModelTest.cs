@@ -3,16 +3,24 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
+using Moq;
+using MvvmCross.Navigation;
 
 namespace OfficeTime.Tests.ViewModel
 {
     public class LoginViewModelTest
     {
+        private Mock<IMvxNavigationService> notificationService;
+
+        public LoginViewModelTest()
+        {
+            notificationService = new Mock<IMvxNavigationService>();
+        }
         [Fact]
         public void CanLogin_WhenEmailAndPasswordEmpty_ShouldReturnFalse()
         {
             //arrange
-            var loginViewModel = new LoginViewModel();
+            var loginViewModel = new LoginViewModel(notificationService.Object);
 
             //act
             bool result = loginViewModel.CanLogin;
@@ -25,7 +33,7 @@ namespace OfficeTime.Tests.ViewModel
         public void CanLogin_WhenEmailOrPasswordEmpty_ShouldReturnFalse()
         {
             //arrange
-            var loginViewModel = new LoginViewModel();
+            var loginViewModel = new LoginViewModel(notificationService.Object);
             loginViewModel.Email = "test";
             loginViewModel.Password = null;
 
@@ -40,7 +48,7 @@ namespace OfficeTime.Tests.ViewModel
         public void CanLogin_WhenEmailOrPasswordFilled_ShouldReturnTrue()
         {
             //arrange
-            var loginViewModel = new LoginViewModel();
+            var loginViewModel = new LoginViewModel(notificationService.Object);
             loginViewModel.Email = "test";
             loginViewModel.Password = "password";
 
@@ -54,10 +62,10 @@ namespace OfficeTime.Tests.ViewModel
         [Fact]
         public void CanLogin_WhenEmailIsInvalid_ReturnErrorTest()
         {
-            var loginViewModel = new LoginViewModel();
-            loginViewModel.Username = "test";
+            var loginViewModel = new LoginViewModel(notificationService.Object);
+            loginViewModel.Email = "test";
 
-            bool isValid = loginViewModel.Username.Contains("@");
+            bool isValid = loginViewModel.Email.Contains("@");
 
             Assert.False(isValid);
 
@@ -70,10 +78,10 @@ namespace OfficeTime.Tests.ViewModel
         [Fact]
         public void CanLogin_WhenEmailIsFiveCharOrMore_ReturnnULL()
         {
-            var loginViewModel = new LoginViewModel();
-            loginViewModel.Username = "fivechar@gmail.com";
+            var loginViewModel = new LoginViewModel(notificationService.Object);
+            loginViewModel.Email = "fivechar@gmail.com";
 
-            bool isValid = loginViewModel.Username.Contains("@");
+            bool isValid = loginViewModel.Email.Contains("@");
 
             Assert.True(isValid);
 

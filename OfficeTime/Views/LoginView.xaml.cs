@@ -13,14 +13,5 @@ namespace OfficeTime.Views
             InitializeComponent();
         }
 
-        //private void TextBox_GotFocus(object sender, System.Windows.RoutedEventArgs e)
-        //{
-        //    lbl.Content = "hey";
-        //}
-
-        //private void TextBox_LostFocus(object sender, RoutedEventArgs e)
-        //{
-        //    lbl.Content = "";
-        //}
     }
 }

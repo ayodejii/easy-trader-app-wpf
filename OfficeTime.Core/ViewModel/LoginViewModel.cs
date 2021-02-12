@@ -1,4 +1,5 @@
 ﻿using MvvmCross.Commands;
+using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -11,10 +12,11 @@ namespace OfficeTime.MvxStarter.Core.ViewModel
         
         private string _password;
         private string _email;
+        private readonly IMvxNavigationService navigationService;
 
-        public LoginViewModel()
+        public LoginViewModel(IMvxNavigationService navigationService)
         {
-
+            this.navigationService = navigationService;
         }
 
         public string Email
@@ -43,7 +45,9 @@ namespace OfficeTime.MvxStarter.Core.ViewModel
 
         public void Login()
         {
-            
+            //if (Email == "admin@email.com" && Password == "admin")
+                navigationService.Navigate(new MainViewModel());
+
         }
 
         public IMvxCommand LoginCommand

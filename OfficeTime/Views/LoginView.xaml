@@ -31,12 +31,12 @@
             <Label Content="{Binding ValidateEmail}" Style="{StaticResource textBoxLabelStyle}" Opacity="0.3" Background="Transparent" Foreground="Red" />
             <Label Content="Password" Style="{StaticResource textBoxLabelStyle}" />
             <Border>
-                <TextBox Text="{Binding Password}"
+                <TextBox Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}"
                         FontFamily="ms-appx:///Assets/PassDot.ttf#PassDot"
                         FontSize="35" Style="{StaticResource textBoxStyle}"/>
             </Border>
             <CheckBox Content="Remember Me?" Style="{StaticResource checkBoxStyle}" />
-            <Button IsEnabled="{Binding CanLogin}" Content="LOGIN"  Style="{StaticResource loginButtonStyle}" />
+            <Button IsEnabled="{Binding CanLogin}" Content="LOGIN" Command="{Binding LoginCommand}"  Style="{StaticResource loginButtonStyle}" />
             <TextBlock Style="{StaticResource linkTextStyle}">
                 <Hyperlink TextDecorations="None" NavigateUri="http://forgotpassword.com">Forgot Password</Hyperlink>
             </TextBlock>

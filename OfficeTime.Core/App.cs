@@ -1,4 +1,5 @@
-﻿using MvvmCross.ViewModels;
+﻿using MvvmCross;
+using MvvmCross.ViewModels;
 using OfficeTime.MvxStarter.Core.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,8 @@ namespace OfficeTime.MvxStarter.Core
     {
         public override void Initialize()
         {
+            
+            //Mvx.IoCProvider.RegisterSingleton<IStaffData>(new StaffData());
             RegisterAppStart<LoginViewModel>();
         }
     }
