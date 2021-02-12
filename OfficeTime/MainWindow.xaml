@@ -8,35 +8,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="500">
     <Grid >
-        <!--<Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <StackPanel Style="{StaticResource topStackPanelStyle}">
-            <Label Style="{StaticResource topBarLabelStyle}">
-                <TextBlock Style="{StaticResource topBarTextStyle}">
-                    <TextBlock.TextEffects>
-                        <TextEffect PositionStart="2" 
-                                    PositionCount="1" 
-                                    Foreground="Red"/>
-                    </TextBlock.TextEffects>
-                </TextBlock>
-            </Label>
-        </StackPanel>
-        <StackPanel Grid.Row="1" Style="{StaticResource bottomStackPanelStyle}">
-            <Label Content="Email" Style="{StaticResource textBoxLabelStyle}" />
-            <Border>
-                <TextBox Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource textBoxStyle}" />
-            </Border>
-            <Label Content="Password" Style="{StaticResource textBoxLabelStyle}" />
-            <Border>
-                <TextBox Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource textBoxStyle}" />
-            </Border>
-            <CheckBox Content="Remember Me?" Style="{StaticResource checkBoxStyle}" />
-            <Button Content="LOGIN" Style="{StaticResource loginButtonStyle}" />
-            <TextBlock Style="{StaticResource linkTextStyle}">
-                <Hyperlink TextDecorations="None" NavigateUri="http://forgotpassword.com">Forgot Password</Hyperlink>
-            </TextBlock>
-        </StackPanel>-->
+        
     </Grid>
 </views:MvxWindow>

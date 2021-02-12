@@ -8,23 +8,26 @@ namespace OfficeTime.MvxStarter.Core.ViewModel
 {
     public class LoginViewModel : MvxViewModel
     {
+        
+        private string _password;
+        private string _email;
+
         public LoginViewModel()
         {
 
         }
-        private string _username;
 
-        public string Username
+        public string Email
         {
-            get { return _username; }
-            set 
-            { 
-                SetProperty(ref _username, value);
+            get { return _email; }
+            set
+            {
+                SetProperty(ref _email, value);
                 RaisePropertyChanged(nameof(CanLogin));
+                RaisePropertyChanged(nameof(ValidateEmail));
             }
         }
 
-        private string _password;
         public string Password
         {
             get { return _password; }
@@ -36,7 +39,7 @@ namespace OfficeTime.MvxStarter.Core.ViewModel
 
         }
 
-        public bool CanLogin => !string.IsNullOrEmpty(Username) && !string.IsNullOrEmpty(Password);
+        public bool CanLogin => !string.IsNullOrEmpty(Email) && !string.IsNullOrEmpty(Password);
 
         public void Login()
         {
@@ -50,6 +53,16 @@ namespace OfficeTime.MvxStarter.Core.ViewModel
                 return new MvxCommand(Login); 
             }
         }
+
+        public string ValidateEmail
+        {
+            get
+            {
+                return Convert.ToBoolean(!Email?.Contains("@")) ? "Please enter a valid email address" : null;
+            }
+        }
+        //validation
+        //private int myVar;
 
 
     }

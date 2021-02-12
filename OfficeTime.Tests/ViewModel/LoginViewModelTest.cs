@@ -26,7 +26,7 @@ namespace OfficeTime.Tests.ViewModel
         {
             //arrange
             var loginViewModel = new LoginViewModel();
-            loginViewModel.Username = "test";
+            loginViewModel.Email = "test";
             loginViewModel.Password = null;
 
             //act
@@ -41,7 +41,7 @@ namespace OfficeTime.Tests.ViewModel
         {
             //arrange
             var loginViewModel = new LoginViewModel();
-            loginViewModel.Username = "test";
+            loginViewModel.Email = "test";
             loginViewModel.Password = "password";
 
             //act
@@ -49,6 +49,37 @@ namespace OfficeTime.Tests.ViewModel
 
             //assert
             Assert.True(result);
+        }
+
+        [Fact]
+        public void CanLogin_WhenEmailIsInvalid_ReturnErrorTest()
+        {
+            var loginViewModel = new LoginViewModel();
+            loginViewModel.Username = "test";
+
+            bool isValid = loginViewModel.Username.Contains("@");
+
+            Assert.False(isValid);
+
+            string expectedResult = "Please enter a valid email address";
+            string actualResult = loginViewModel.ValidateEmail;
+
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void CanLogin_WhenEmailIsFiveCharOrMore_ReturnnULL()
+        {
+            var loginViewModel = new LoginViewModel();
+            loginViewModel.Username = "fivechar@gmail.com";
+
+            bool isValid = loginViewModel.Username.Contains("@");
+
+            Assert.True(isValid);
+
+            string actualResult = loginViewModel.ValidateEmail;
+
+            Assert.Null(actualResult);
         }
     }
 }

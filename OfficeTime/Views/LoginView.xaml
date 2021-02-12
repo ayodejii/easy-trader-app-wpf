@@ -26,15 +26,17 @@
         <StackPanel Grid.Row="1" Style="{StaticResource bottomStackPanelStyle}">
             <Label Content="Email" Style="{StaticResource textBoxLabelStyle}" />
             <Border>
-                <TextBox Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource textBoxStyle}" />
+                <TextBox Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource textBoxStyle}" />
             </Border>
-            <Label Content="{Binding EmailValidationText}" FontSize="16" />
+            <Label Content="{Binding ValidateEmail}" Style="{StaticResource textBoxLabelStyle}" Opacity="0.3" Background="Transparent" Foreground="Red" />
             <Label Content="Password" Style="{StaticResource textBoxLabelStyle}" />
             <Border>
-                <TextBox Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource textBoxStyle}" />
+                <TextBox Text="{Binding Password}"
+                        FontFamily="ms-appx:///Assets/PassDot.ttf#PassDot"
+                        FontSize="35" Style="{StaticResource textBoxStyle}"/>
             </Border>
             <CheckBox Content="Remember Me?" Style="{StaticResource checkBoxStyle}" />
-            <Button IsEnabled="{Binding CanLogin}" Content="LOGIN" Style="{StaticResource loginButtonStyle}" />
+            <Button IsEnabled="{Binding CanLogin}" Content="LOGIN"  Style="{StaticResource loginButtonStyle}" />
             <TextBlock Style="{StaticResource linkTextStyle}">
                 <Hyperlink TextDecorations="None" NavigateUri="http://forgotpassword.com">Forgot Password</Hyperlink>
             </TextBlock>
