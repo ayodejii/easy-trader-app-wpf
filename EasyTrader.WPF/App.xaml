@@ -1,0 +1,22 @@
+﻿<Application x:Class="EasyTrader.WPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:EasyTrader.WPF"
+             xmlns:viewModels="clr-namespace:EasyTrader.WPF.ViewModels"
+             xmlns:views="clr-namespace:EasyTrader.WPF.Views">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Contents/Styles/Common.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewModels:HomeViewModel}">
+                <views:HomeView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModels:PortfolioViewModel}">
+                <views:PortfolioView />
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

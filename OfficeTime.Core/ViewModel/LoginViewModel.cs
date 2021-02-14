@@ -1,6 +1,7 @@
 ﻿using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
+using OfficeTime.MvxStarter.Core.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -13,10 +14,12 @@ namespace OfficeTime.MvxStarter.Core.ViewModel
         private string _password;
         private string _email;
         private readonly IMvxNavigationService navigationService;
+        private readonly IDialogService dialogService;
 
         public LoginViewModel(IMvxNavigationService navigationService)
         {
             this.navigationService = navigationService;
+            //this.dialogService = dialogService;
         }
 
         public string Email
@@ -45,9 +48,10 @@ namespace OfficeTime.MvxStarter.Core.ViewModel
 
         public void Login()
         {
-            //if (Email == "admin@email.com" && Password == "admin")
+            if (Email == "admin@email.com" && Password == "admin")
                 navigationService.Navigate(new MainViewModel());
-
+            else
+                dialogService.ShowMessageBox("bad login");
         }
 
         public IMvxCommand LoginCommand

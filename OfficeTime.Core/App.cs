@@ -12,8 +12,8 @@ namespace OfficeTime.MvxStarter.Core
         public override void Initialize()
         {
             
-            //Mvx.IoCProvider.RegisterSingleton<IStaffData>(new StaffData());
             RegisterAppStart<LoginViewModel>();
+            //Mvx.IoCProvider.RegisterSingleton<IDialogService>(new DialogService());
         }
     }
 }
