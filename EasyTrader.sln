@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyTrader.Domain", "EasyTrader.Domain\EasyTrader.Domain.csproj", "{DE81705F-20B7-4A5E-A192-8F147FF73FD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyTrader.Domain", "EasyTrader.Domain\EasyTrader.Domain.csproj", "{DE81705F-20B7-4A5E-A192-8F147FF73FD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyTrader.EntityFramework", "EasyTrader.EntityFramework\EasyTrader.EntityFramework.csproj", "{BE37BA66-02C3-4B4E-8A7D-9798665AE979}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyTrader.EntityFramework", "EasyTrader.EntityFramework\EasyTrader.EntityFramework.csproj", "{BE37BA66-02C3-4B4E-8A7D-9798665AE979}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyTrader.WPF", "EasyTrader.WPF\EasyTrader.WPF.csproj", "{37AF579E-E09C-4BD1-8CEA-E58438F6BBE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyTrader.WPF", "EasyTrader.WPF\EasyTrader.WPF.csproj", "{37AF579E-E09C-4BD1-8CEA-E58438F6BBE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{047FE37C-42F7-4197-B6E7-F51CCF1E9F89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{37AF579E-E09C-4BD1-8CEA-E58438F6BBE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37AF579E-E09C-4BD1-8CEA-E58438F6BBE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37AF579E-E09C-4BD1-8CEA-E58438F6BBE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{047FE37C-42F7-4197-B6E7-F51CCF1E9F89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{047FE37C-42F7-4197-B6E7-F51CCF1E9F89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{047FE37C-42F7-4197-B6E7-F51CCF1E9F89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{047FE37C-42F7-4197-B6E7-F51CCF1E9F89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
