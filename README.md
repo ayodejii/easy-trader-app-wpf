@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/isaacikusika/AzureDevOpsTest/_apis/build/status/ayodejii.easy-trader-app-wpf?branchName=master)](https://dev.azure.com/isaacikusika/AzureDevOpsTest/_build/latest?definitionId=1&branchName=master)
+
 # easy-trader-app-wpf
 
 # Overview
