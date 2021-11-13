@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyTrader.EntityFramework"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyTrader.WPF", "EasyTrader.WPF\EasyTrader.WPF.csproj", "{37AF579E-E09C-4BD1-8CEA-E58438F6BBE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{047FE37C-42F7-4197-B6E7-F51CCF1E9F89}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyTrader.Playground", "EasyTrader.Playground\EasyTrader.Playground.csproj", "{C91CD050-4998-4F0E-9017-CC028F39018C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{37AF579E-E09C-4BD1-8CEA-E58438F6BBE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37AF579E-E09C-4BD1-8CEA-E58438F6BBE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37AF579E-E09C-4BD1-8CEA-E58438F6BBE8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{047FE37C-42F7-4197-B6E7-F51CCF1E9F89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{047FE37C-42F7-4197-B6E7-F51CCF1E9F89}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{047FE37C-42F7-4197-B6E7-F51CCF1E9F89}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{047FE37C-42F7-4197-B6E7-F51CCF1E9F89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C91CD050-4998-4F0E-9017-CC028F39018C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C91CD050-4998-4F0E-9017-CC028F39018C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C91CD050-4998-4F0E-9017-CC028F39018C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C91CD050-4998-4F0E-9017-CC028F39018C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
