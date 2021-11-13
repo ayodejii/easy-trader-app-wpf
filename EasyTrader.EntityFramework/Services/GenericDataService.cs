@@ -9,15 +9,15 @@ namespace EasyTrader.EntityFramework.Services
 {
     public class GenericDataService<T> : IDataService<T> where T : DomainObject
     {
-        private readonly EasyTraderDbContextFactory _contextFactory;
+        private readonly EasyTraderDbContextFactory contextFactory;
         public GenericDataService(EasyTraderDbContextFactory contextFactory)
         {
-            this._contextFactory = contextFactory;
+            this.contextFactory = contextFactory;
         }
 
         public async Task<T> Add(T entity)
         {
-            using (EasyTraderDbContext context = _contextFactory.CreateDbContext())
+            using (EasyTraderDbContext context = this.contextFactory.CreateDbContext())
             {
                 EntityEntry<T> entryResult = await context.Set<T>().AddAsync(entity);
                 await context.SaveChangesAsync();
@@ -27,7 +27,7 @@ namespace EasyTrader.EntityFramework.Services
 
         public async Task<bool> Delete(int id)
         {
-            using (EasyTraderDbContext context = _contextFactory.CreateDbContext())
+            using (EasyTraderDbContext context = this.contextFactory.CreateDbContext())
             {
                 T entity = await context.Set<T>().FirstOrDefaultAsync(t => t.Id == id);
                 context.Set<T>().Remove(entity);
@@ -38,7 +38,7 @@ namespace EasyTrader.EntityFramework.Services
 
         public async Task<T> Get(int id)
         {
-            using (EasyTraderDbContext context = _contextFactory.CreateDbContext())
+            using (EasyTraderDbContext context = this.contextFactory.CreateDbContext())
             {
                 T entity = await context.Set<T>().FirstOrDefaultAsync(t => t.Id == id);
                 return entity;
@@ -47,7 +47,7 @@ namespace EasyTrader.EntityFramework.Services
 
         public async Task<IEnumerable<T>> GetAll()
         {
-            using (EasyTraderDbContext context = _contextFactory.CreateDbContext())
+            using (EasyTraderDbContext context = this.contextFactory.CreateDbContext())
             {
                 IEnumerable<T> entities = await context.Set<T>().ToListAsync();
                 return entities;
@@ -56,7 +56,7 @@ namespace EasyTrader.EntityFramework.Services
 
         public async Task<T> Update(int id, T entity)
         {
-            using (EasyTraderDbContext context = _contextFactory.CreateDbContext())
+            using (EasyTraderDbContext context = this.contextFactory.CreateDbContext())
             {
                 entity.Id = id;
                 context.Set<T>().Update(entity);
