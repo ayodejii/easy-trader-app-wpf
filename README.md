@@ -4,6 +4,6 @@
 
 # Overview
 
-This is a WPF app that's supposed to be help stores in trading and account management.
+This is a WPF app that helps stores in trading and account management.
 
-It uses Entity Framework  for db mapping.
+It uses Entity Framework for db mapping.
